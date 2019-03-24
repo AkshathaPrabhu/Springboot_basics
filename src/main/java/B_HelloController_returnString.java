@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * */
 
 @RestController
-public class B_HelloController {
+public class B_HelloController_returnString {
 
     //by default @RequestMapping maps to a GET method
     @RequestMapping("/hello")
