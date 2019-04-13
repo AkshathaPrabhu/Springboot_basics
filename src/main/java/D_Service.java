@@ -31,5 +31,16 @@ public class D_Service {
         topics.add(topic);
     }
 
+    public void updateTopic(int id, Topic topic) {
+        for (int i = 0; i <= topics.size(); i++) {
+            Topic topic1 = topics.get(i);
+            if (topic1.id == id) {
+                topics.set(i, topic);
+                return;
+            }
+        }
+
+    }
+
 
 }

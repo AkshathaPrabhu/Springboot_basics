@@ -3,6 +3,7 @@ package main.java;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,12 +15,12 @@ import java.util.List;
 public class C_TopicController {
 
     @Autowired
-         // with @Autowired we don't need to specify D_Service topicService = new D_Service();
-    D_Service topicService;
+    // with @Autowired we don't need to specify D_Service topicService = new D_Service();
+        D_Service topicService;
 
     @RequestMapping("/topics")
-                //equivalent to : @RequestMapping(method = RequestMethod.GET, value = "/topics")
-                //equivalent to : @GetMapping("/topics")
+    //equivalent to : @RequestMapping(method = RequestMethod.GET, value = "/topics")
+    //equivalent to : @GetMapping("/topics")
     public List<Topic> getAllTopics() {
         return topicService.getAllTopics();
     }
@@ -30,8 +31,13 @@ public class C_TopicController {
     }
 
     @PostMapping(value = "/topics")
-                //equivalent to : @RequestMapping(method = RequestMethod.POST, value = "/topics")
+    //equivalent to : @RequestMapping(method = RequestMethod.POST, value = "/topics")
     public void addTopic(@RequestBody Topic topic) {
         topicService.addTopic(topic);
+    }
+
+    @PutMapping("/topics/{id}")
+    public void updateTopic(@PathVariable int id, @RequestBody Topic topic) {
+        topicService.updateTopic(id, topic);
     }
 }
