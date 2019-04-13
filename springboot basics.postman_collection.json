@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "ead7284f-3edf-4b9d-acd1-5d2d3ff3f9e5",
+		"name": "springboot basics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/topics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/topics"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/topics/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/topics/1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/topics",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 4,\n    \"name\": \"POST request mapping\",\n    \"description\": \"basics of POST request\"\n}"
+				},
+				"url": "http://localhost:8080/topics"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/topics/2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"name\": \"PUT request mapping\",\n    \"description\": \"basics of PUT request\"\n}"
+				},
+				"url": "http://localhost:8080/topics/2"
+			},
+			"response": []
+		}
+	]
+}
