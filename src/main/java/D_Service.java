@@ -2,6 +2,7 @@ package main.java;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,13 +16,19 @@ import java.util.List;
 @Service
 public class D_Service {
 
+    private List<Topic> topics = new ArrayList<>(
+        Arrays.asList(
+            new Topic(1, "A_SpringbootApp", "explains the starting point for springboot app."),
+            new Topic(2, "B_Controllers", "basics of @RestController."),
+            new Topic(3, "D_Service", "basics of @Service")
+        ));
+
     public List<Topic> getAllTopics() {
-        return
-            Arrays.asList(
-                new Topic(1, "A_SpringbootApp", "explains the starting point for springboot app."),
-                new Topic(2, "B_Controllers", "basics of @RestController."),
-                new Topic(3, "D_Service", "basics of @Service")
-            );
+        return topics;
+    }
+
+    public void addTopic(Topic topic) {
+        topics.add(topic);
     }
 
 
