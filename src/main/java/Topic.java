@@ -1,15 +1,15 @@
-package main.controllers;
+package java;
 
-public class C_Topics {
+public class Topic {
 
     public int id;
     public String name;
     public String description;
 
-    public C_Topics() {
+    public Topic() {
     }
 
-    public C_Topics(int id, String name, String description) {
+    public Topic(int id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
