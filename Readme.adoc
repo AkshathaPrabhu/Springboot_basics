@@ -1,0 +1,25 @@
+This project consists of all the basics of springboot that I have learnt from this tutorial:
+
+https://www.youtube.com/watch?v=msXL2oDexqw&list=PLmbC-xnvykcghOSOJ1ZF6ja3aOgZAgaMO
+
+For theory check videos: 1 to 9, 13-14, 15,
+
+=== Endpoints that are built in this project:
+
+1. GET /topics - get all the topics
+2. GET /topics/id - get just one topic with the corresponding `id`
+3. POST /topics  - add a new topic
+4. PUT /topics/id  -  update a topic
+5. DELETE /topics/id  - deletes the particular topic
+
+=== Springboot annotations:
+
+1. @SpringBootApplication
+2. @RestController
+ - @RequestMapping(value = "/path/{var}?param=123", method ="RequestMethod.GET")
+ - @GetMapping(value = "/path")
+ - @PathVariable("var")
+ - @RequestBody - used for request bodies in PUT, POST
+ - @RequestParam("param")
+3. @Service
+4. @Autowired
