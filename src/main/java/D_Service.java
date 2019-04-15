@@ -39,8 +39,9 @@ public class D_Service {
                 return;
             }
         }
-
     }
 
-
+    public void deleteTopic(int id) {
+        topics.removeIf(it -> it.getId() == id);
+    }
 }
