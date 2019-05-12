@@ -23,3 +23,12 @@ For theory check videos: 1 to 9, 13-14, 15,
  - @RequestParam("param")
 3. @Service
 4. @Autowired
+
+=== Configuring a springboot app.
+Using  a `application.properties` file enables one to configure certain properties for the springboot app.
+There are certain keys available which need to be defined in the app.props file as per the requirement.
+These predefined keys can be found in : https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+
+=== Project setup in local:
+1. mark `src` folder as source folder in the module settings in IntelliJ
+2. you can changed the server.port in application.properties file as per your need
