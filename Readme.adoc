@@ -2,7 +2,7 @@ This project consists of all the basics of springboot that I have learnt from th
 
 https://www.youtube.com/watch?v=msXL2oDexqw&list=PLmbC-xnvykcghOSOJ1ZF6ja3aOgZAgaMO
 
-For theory check videos: 1 to 9, 13-14, 15,
+For theory check videos: 1 to 9, 13-14, 15,26
 
 === Endpoints that are built in this project:
 
@@ -25,10 +25,23 @@ For theory check videos: 1 to 9, 13-14, 15,
 4. @Autowired
 
 === Configuring a springboot app.
-Using  a `application.properties` file enables one to configure certain properties for the springboot app.
+Using  an `application.properties` file enables one to configure certain properties for the springboot app.
 There are certain keys available which need to be defined in the app.props file as per the requirement.
 These predefined keys can be found in : https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+
+=== Spring JPA (Java Persistence API)
+- JPA is an api that let's us to ORM while connecting to a relational db (RDBMS i.e. a sql db like Oracle, PostgreSQL)
+- in RDBMS you'll have tables and keys like primary keys, foreign keys which are relational to one another
+- To connect a Java application to a RDBMS we need to use something like a JDBC
+- JDBC will help tp run sql queries on the dB and will convert the results to an Object instance.
+- ORM allows us to map a class entity to a table so that we don't have to specifically run a query but rather the framework (i.e, Spring) will do it for us
+- JPA is a way for us to use ORM, i.e. it allows us to configure the entity classes and provide them to the framework which will take care of ORM.
+
+Spring Data JPA is a project which allows us to connect to a RDBMS and let's us provide JPA configs. on entity classes and then Spring framework handles the ORM part of it
+
 
 === Project setup in local:
 1. mark `src` folder as source folder in the module settings in IntelliJ
 2. you can changed the server.port in application.properties file as per your need
+3. download the postman collection present in this project
+4. connect to the port mentioned in `application.properties`

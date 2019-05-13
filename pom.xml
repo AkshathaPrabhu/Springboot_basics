@@ -7,7 +7,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot_basics</name>
 
-    <!-- This parent just specifies to maven the configuration as to what versions of the jar to download in <dependencies>-->
+    <!-- This parent just specifies to maven "the configuration" as to what versions of the jar to download in <dependencies>-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -15,9 +15,17 @@
     </parent>
 
     <dependencies>
+        <!-- Dependency for springboot web - used to create a web app. -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Dependency for Spring JPA - used to connect to the db-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>1.4.2.RELEASE</version>
         </dependency>
 
     </dependencies>
