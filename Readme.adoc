@@ -12,7 +12,7 @@ For theory check videos: 1 to 9, 13-14, 15,26
 4. PUT /topics/id  -  update a topic
 5. DELETE /topics/id  - deletes the particular topic
 
-=== Springboot annotations:
+=== Springboot annotations (used in this project):
 
 1. @SpringBootApplication
 2. @RestController
@@ -23,6 +23,8 @@ For theory check videos: 1 to 9, 13-14, 15,26
  - @RequestParam("param")
 3. @Service
 4. @Autowired
+5. @Entity
+6. @Id
 
 === Configuring a springboot app.
 Using  an `application.properties` file enables one to configure certain properties for the springboot app.
@@ -39,9 +41,13 @@ These predefined keys can be found in : https://docs.spring.io/spring-boot/docs/
 
 Spring Data JPA is a project which allows us to connect to a RDBMS and let's us provide JPA configs. on entity classes and then Spring framework handles the ORM part of it
 
+To create a repository layer:
+1. Create @Entity class
+2. Create a data class which will tell JPA how to connect to the db.
 
 === Project setup in local:
-1. mark `src` folder as source folder in the module settings in IntelliJ
+1. mark only the `src` folder as source folder (in the module settings) in IntelliJ
 2. you can changed the server.port in application.properties file as per your need
 3. download the postman collection present in this project
 4. connect to the port mentioned in `application.properties`
+5. Note: this project is compatible with jdk 1.8 and up

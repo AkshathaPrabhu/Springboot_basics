@@ -28,6 +28,14 @@
             <version>1.4.2.RELEASE</version>
         </dependency>
 
+        <!-- For in-memory DB -->
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+
     </dependencies>
 
     <properties>

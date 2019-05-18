@@ -1,4 +1,4 @@
-package main.java;
+package main.jpa;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,12 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+import main.java.D_Service;
+import main.java.Topic;
+
 
 @RestController
-public class C_TopicController {
+public class TopicController {
 
-    @Autowired   // with @Autowired we don't need to specify D_Service topicService = new D_Service();
-    D_Service topicService;
+    @Autowired
+    // with @Autowired we don't need to specify D_Service topicService = new D_Service();
+        D_Service topicService;
 
     @RequestMapping("/topics")
     //equivalent to : @RequestMapping(method = RequestMethod.GET, value = "/topics")
