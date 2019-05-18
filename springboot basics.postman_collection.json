@@ -2,35 +2,9 @@
 	"info": {
 		"_postman_id": "ead7284f-3edf-4b9d-acd1-5d2d3ff3f9e5",
 		"name": "springboot basics",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
-		{
-			"name": "http://localhost:8080/topics",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": "http://localhost:8080/topics"
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:8080/topics/1",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": "http://localhost:8080/topics/1"
-			},
-			"response": []
-		},
 		{
 			"name": "http://localhost:8080/topics",
 			"request": {
@@ -38,15 +12,48 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"type": "text",
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"id\": 4,\n    \"name\": \"POST request mapping\",\n    \"description\": \"basics of POST request\"\n}"
 				},
-				"url": "http://localhost:8080/topics"
+				"url": {
+					"raw": "http://localhost:8080/topics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/topics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/topics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topics"
+					]
+				}
 			},
 			"response": []
 		},
@@ -66,7 +73,125 @@
 					"mode": "raw",
 					"raw": "{\n    \"id\": 2,\n    \"name\": \"PUT request mapping\",\n    \"description\": \"basics of PUT request\"\n}"
 				},
-				"url": "http://localhost:8080/topics/2"
+				"url": {
+					"raw": "http://localhost:8080/topics/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topics",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/topics/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/topics/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topics",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/jpaTopics",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 123,\n    \"name\": \"POST request mapping\",\n    \"description\": \"basics of POST request\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/jpaTopics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"jpaTopics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/jpaTopics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8082/jpaopics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"jpaopics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/jpaTopics/12",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"name\": \"PUT request mapping\",\n    \"description\": \"basics of PUT request\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/jpaTopics/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"jpaTopics",
+						"12"
+					]
+				}
 			},
 			"response": []
 		}
