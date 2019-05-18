@@ -11,43 +11,35 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-import main.java.D_Service;
-import main.java.Topic;
-
 
 @RestController
 public class TopicController {
 
     @Autowired
-    // with @Autowired we don't need to specify D_Service topicService = new D_Service();
-        D_Service topicService;
+    TopicService topicService;
 
-    @RequestMapping("/topics")
-    //equivalent to : @RequestMapping(method = RequestMethod.GET, value = "/topics")
-    //equivalent to : @GetMapping("/topics")
+    @RequestMapping("/jpaTopics")
     public List<Topic> getAllTopics() {
         return topicService.getAllTopics();
     }
 
-    @RequestMapping("/topics/{topic_id}")
+    @RequestMapping("/jpaTopics/{topic_id}")
     public Topic getTopic(@PathVariable("topic_id") int id) {
         return topicService.getAllTopics().stream().filter(it -> it.id == id).findFirst().get();
     }
 
-    @PostMapping(value = "/topics")
-    //equivalent to : @RequestMapping(method = RequestMethod.POST, value = "/topics")
+    @PostMapping(value = "/jpaTopics")
     public void addTopic(@RequestBody Topic topic) {
         topicService.addTopic(topic);
     }
 
-    @PutMapping("/topics/{id}")
+    @PutMapping("/jpaTopics/{id}")
     public void updateTopic(@PathVariable int id, @RequestBody Topic topic) {
         topicService.updateTopic(id, topic);
     }
 
-    @DeleteMapping(value = "/topics/{topic_id}")
-    public void deleteTopic(@PathVariable("topicid") int id)
-    {
+    @DeleteMapping(value = "/jpaTopics/{topic_id}")
+    public void deleteTopic(@PathVariable("topicid") int id) {
         topicService.deleteTopic(id);
     }
 }

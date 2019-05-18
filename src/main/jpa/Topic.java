@@ -1,9 +1,8 @@
 package main.jpa;
 
-import org.springframework.data.annotation.Id;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * We need to map Topic to a table in the DB

@@ -22,13 +22,6 @@ public class TopicService {
     @Autowired
     private TopicRepository topicRepository;
 
-    private List<Topic> topics = new ArrayList<>(
-        Arrays.asList(
-            new Topic(1, "A_SpringbootApp", "explains the starting point for springboot app."),
-            new Topic(2, "B_Controllers", "basics of @RestController."),
-            new Topic(3, "D_Service", "basics of @Service")
-        ));
-
     public List<Topic> getAllTopics() {
         List<Topic> topics = new ArrayList<>();
         topicRepository.findAll().forEach(it -> topics.add(it));
@@ -41,16 +34,10 @@ public class TopicService {
     }
 
     public void updateTopic(int id, Topic topic) {
-        for (int i = 0; i <= topics.size(); i++) {
-            Topic topic1 = topics.get(i);
-            if (topic1.id == id) {
-                topics.set(i, topic);
-                return;
-            }
-        }
+        topicRepository.save(topic);
     }
 
     public void deleteTopic(int id) {
-        topics.removeIf(it -> it.getId() == id);
+        topicRepository.delete(id);
     }
 }

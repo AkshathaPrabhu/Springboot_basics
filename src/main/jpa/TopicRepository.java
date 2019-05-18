@@ -2,7 +2,7 @@ package main.jpa;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface TopicRepository extends CrudRepository<Topic, String> {
+public interface TopicRepository extends CrudRepository<Topic, Integer> {
 
     /**
      * This class will have following methods:

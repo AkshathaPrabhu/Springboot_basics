@@ -42,8 +42,11 @@ These predefined keys can be found in : https://docs.spring.io/spring-boot/docs/
 Spring Data JPA is a project which allows us to connect to a RDBMS and let's us provide JPA configs. on entity classes and then Spring framework handles the ORM part of it
 
 To create a repository layer:
-1. Create @Entity class
-2. Create a data class which will tell JPA how to connect to the db.
+1. add springboot-jpa dependency and a db dependency to pom.xml
+2. Create @Entity class
+3. create an interface which extends CrudRepository class
+4. in the @service class @autowire the repository class creates in step 3. and write services easily using the functions of CrudRepository class
+5. create a controller which will map url's to @service class' functions.
 
 === Project setup in local:
 1. mark only the `src` folder as source folder (in the module settings) in IntelliJ
