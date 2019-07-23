@@ -26,6 +26,8 @@ For theory check videos: 1 to 9, 13-14, 15,26
 5. @Entity
 6. @Id
 
+*NOTE: @Service, @Controller , @Repository all specializations of @Component type (In spring @Component allows implementation classes to be autodetected through the classpath scanning.)*
+
 === Configuring a springboot app.
 Using  an `application.properties` file enables one to configure certain properties for the springboot app.
 There are certain keys available which need to be defined in the app.props file as per the requirement.
@@ -42,11 +44,19 @@ These predefined keys can be found in : https://docs.spring.io/spring-boot/docs/
 Spring Data JPA is a project which allows us to connect to a RDBMS and let's us provide JPA configs. on entity classes and then Spring framework handles the ORM part of it
 
 To create a repository layer:
-1. add springboot-jpa dependency and a db dependency to pom.xml
+1. add `spring-boot-starter-data-jpa`* dependency and a db dependency to pom.xml
 2. Create @Entity class
 3. create an interface which extends CrudRepository class
 4. in the @service class @autowire the repository class creates in step 3. and write services easily using the functions of CrudRepository class
 5. create a controller which will map url's to @service class' functions.
+
+
+*As soon as we include Spring Boot Starter JPA in our project, we get the following features from a wide variety of dependencies:*
+
+- Auto-configuration of an in-memory embedded database, which allows you to run your application without even setting up a database.
+- Auto-import of the JPA API and Hibernate. Adding this dependency will automatically import the JPA API and use Hibernate as the default implementation.
+- Auto-read of the data source and Hibernate configuration from application.properties.
+- Auto-creation of the entities as tables and auto execution of import.sql.
 
 === Project setup in local:
 1. mark only the `src` folder as source folder (in the module settings) in IntelliJ
