@@ -4,7 +4,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TopicRepository extends CrudRepository<Topic, Integer> {
+public interface TopicRepository extends CrudRepository<Topic_JPA_Class, Integer> {
 
     /**
      * This class will have following methods:

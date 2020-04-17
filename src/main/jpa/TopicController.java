@@ -19,22 +19,22 @@ public class TopicController {
     TopicService topicService;
 
     @RequestMapping("/jpaTopics")
-    public List<Topic> getAllTopics() {
+    public List<Topic_JPA_Class> getAllTopics() {
         return topicService.getAllTopics();
     }
 
     @RequestMapping("/jpaTopics/{topic_id}")
-    public Topic getTopic(@PathVariable("topic_id") int id) {
+    public Topic_JPA_Class getTopic(@PathVariable("topic_id") int id) {
         return topicService.getAllTopics().stream().filter(it -> it.id == id).findFirst().get();
     }
 
     @PostMapping(value = "/jpaTopics")
-    public void addTopic(@RequestBody Topic topic) {
+    public void addTopic(@RequestBody Topic_JPA_Class topic) {
         topicService.addTopic(topic);
     }
 
     @PutMapping("/jpaTopics/{id}")
-    public void updateTopic(@PathVariable int id, @RequestBody Topic topic) {
+    public void updateTopic(@PathVariable int id, @RequestBody Topic_JPA_Class topic) {
         topicService.updateTopic(id, topic);
     }
 

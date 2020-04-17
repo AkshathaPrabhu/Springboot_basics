@@ -15,7 +15,7 @@ import javax.persistence.Id;
  */
 
 @Entity
-public class Topic {
+public class Topic_JPA_Class {
 
 
     @Column(name ="topic_id")
@@ -26,10 +26,10 @@ public class Topic {
 
     public String description;
 
-    public Topic() {
+    public Topic_JPA_Class() {
     }
 
-    public Topic(int id, String name, String description) {
+    public Topic_JPA_Class(int id, String name, String description) {
         //super();
         this.id = id;
         this.name = name;

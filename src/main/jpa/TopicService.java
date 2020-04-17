@@ -4,10 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
-import main.jpa.Topic;
 
 
 /**
@@ -22,18 +19,18 @@ public class TopicService {
     @Autowired
     private TopicRepository topicRepository;
 
-    public List<Topic> getAllTopics() {
-        List<Topic> topics = new ArrayList<>();
+    public List<Topic_JPA_Class> getAllTopics() {
+        List<Topic_JPA_Class> topics = new ArrayList<>();
         topicRepository.findAll().forEach(it -> topics.add(it));
 
         return topics;
     }
 
-    public void addTopic(Topic topic) {
+    public void addTopic(Topic_JPA_Class topic) {
         topicRepository.save(topic);
     }
 
-    public void updateTopic(int id, Topic topic) {
+    public void updateTopic(int id, Topic_JPA_Class topic) {
         topicRepository.save(topic);
     }
 
